@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+        
+body {
+    background-color: #e0ebd7;
+}
+        
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+        
+.header {
+    background-color: #5b775b;
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+        
+.back-button {
+    margin-right: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+        
+.header-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+        
+.support-text {
+    text-align: center;
+    margin: 20px 0 10px;
+    color: #5b775b;
+    font-size: 14px;
+}
+        
+.payment-logos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+        
+.payment-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+        
+.scan-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+}
+        
+.qr-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+        
+.qr-code {
+    width: 180px;
+    height: 180px;
+}
+        
+.merchant-info {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+        
+.merchant-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+        
+.merchant-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+}
+        
+.cek-status-btn {
+    display: block;
+    background-color: white;
+    color: #5b775b;
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+        
+.cek-status-btn:hover {
+    background-color: #f0f0f0;
+}
+        
+.error-message {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #d00;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
