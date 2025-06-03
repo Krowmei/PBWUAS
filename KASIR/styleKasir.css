@@ -1,0 +1,215 @@
+.top-bar h1, 
+.section-title,
+.kode-box,
+.list-pesanan-header,
+.icon-cart,
+.order-table th,
+.order-table td,
+.top-btn,
+.takeaway-section h2,
+.badge-round,
+.icon-circle,
+.total,
+.confirm-btn {
+  color: white;
+}* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #fce7e7;
+  color: white;
+}
+
+/* Top bar */
+.top-bar {
+  background-color: #4f5d4f;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar h1 {
+  font-size: 28px;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-btn {
+  background-color: #2f2f2f;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 6px;
+}
+
+.logout-btn {
+  background-color: #2f2f2f;
+  color: white !important;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 6px;
+}
+
+.logout-btn:link,
+.logout-btn:visited,
+.logout-btn:hover,
+.logout-btn:active {
+  color: white !important;
+  background-color: #2f2f2f !important;
+  text-decoration: none;
+}
+
+.icon-inline {
+  margin-right: 6px;
+}
+
+/* Main wrapper */
+.main-wrapper {
+  display: flex;
+  padding: 20px;
+}
+
+/* Transaksi section */
+.transaksi-section {
+  background-color: #93a78d;
+  padding: 20px;
+  border-radius: 15px;
+  flex: 2;
+  margin-right: 20px;
+}
+
+.section-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* Form styling */
+.transaksi-section form {
+  margin-bottom: 20px;
+}
+
+.transaksi-section label {
+  margin-right: 10px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.transaksi-section input[type="number"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #556a51;
+  margin-right: 10px;
+  margin-bottom: 8px;
+  background-color: white;
+  color: #333;
+  font-size: 16px;
+  width: 200px;
+}
+
+.kode-pemesanan {
+  margin-bottom: 15px;
+}
+
+.kode-box {
+  background-color: #556a51;
+  padding: 8px 16px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.list-pesanan-header {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin: 15px 0 10px;
+  border-bottom: 2px solid #4f5d4f;
+  padding-bottom: 5px;
+}
+
+.icon-cart {
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+/* Table */
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.order-table th,
+.order-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.order-table th {
+  background-color: #4f5d4f;
+}
+
+.row-light {
+  background-color: #9cac8e;
+}
+
+.qty-cell {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.qty-input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  height: 30px;
+  color: black;
+}
+
+/* Payment section */
+.total-payment {
+  text-align: center;
+}
+
+.total {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.confirm-btn {
+  background-color: #00a15c;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-btn {
+  background-color: white; 
+  color: black;    
+  border: 1px solid #999;  
+}
