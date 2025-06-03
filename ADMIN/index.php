@@ -46,7 +46,7 @@ if (isset($_GET['register']) && $_GET['register'] == 'success') {
 <!-- Login Form -->
 <div class="form-container" id="login-form">
   <div class="text-center">
-    <img src="../IMAGE/logo_nobg.png" alt="Logo" class="logo-icon">
+    <img src="../IMAGE/logorevisi.png" alt="Logo" class="logo-icon">
     <h2>Warung Makan Kebumen</h2>
   </div>
   <h3 class="mt-3 mb-3">Login Admin</h3>

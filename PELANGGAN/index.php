@@ -67,7 +67,7 @@ include 'config.php';
 <body>
     <div class="container">
         <div class="logo">
-            <img src="../IMAGE/logo.png" alt="Logo Warung Makan Kebumen">
+            <img src="../IMAGE/logorevisi.png" alt="Logo Warung Makan Kebumen">
             <h1>Warung Makan Kebumen</h1>
         </div>
         

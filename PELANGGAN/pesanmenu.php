@@ -49,7 +49,7 @@ $kategori_result = mysqli_query($conn, $kategori_query);
         <div class="keranjang-panel">
             <a href="index.php" class="kembali-button">←</a>
             <div class="resto-info">
-                <img src="../IMAGE/logo.png" alt="Logo" class="resto-logo">
+                <img src="../IMAGE/logorevisi.png" alt="Logo" class="resto-logo">
                 <div>
                     <h3>Warung Makan</h3>
                     <h4>Kebumen</h4>
