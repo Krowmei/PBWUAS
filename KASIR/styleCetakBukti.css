@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .receipt-container {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 0px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .store-name {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .store-address {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .order-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .order-info {
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  .item-table {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .item-table td {
+    padding: 5px 0;
+  }
+  
+  .item-table td:nth-child(1) {
+    text-align: left;
+    width: 10%;
+  }
+  
+  .item-table td:nth-child(2) {
+    text-align: left;
+    width: 60%;
+  }
+  
+  .item-table td:nth-child(3) {
+    text-align: right;
+    width: 30%;
+  }
+  
+  .totals {
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .totals p {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+  
+  .barcode {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .barcode img {
+    height: 50px;
+  }
+  
+  .barcode-number {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+  .thank-you {
+    font-size: 13px;
+    margin: 15px 0;
+  }
+  
+  .back-button {
+    background-color: #00a15c;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
