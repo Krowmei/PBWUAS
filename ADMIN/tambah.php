@@ -56,7 +56,7 @@
         </div>
         <div class="col-12">
             <button type="submit" name="submit" class="btn btn-success">Simpan</button>
-            <a href="index.php" class="btn btn-secondary">Batal</a>
+            <a href="dashboard.php" class="btn btn-secondary">Batal</a>
         </div>
     </form>
 
@@ -74,7 +74,7 @@
 
         mysqli_query($conn, "INSERT INTO menu (nama_menu, harga, jumlah, kategori, deskripsi, gambar) 
                              VALUES ('$nama', '$harga', '$jumlah', '$kategori', '$deskripsi', '$gambar')");
-        echo "<div class='alert alert-success mt-3'>Data berhasil disimpan! <a href='index.php'>Kembali</a></div>";
+        echo "<div class='alert alert-success mt-3'>Data berhasil disimpan! <a href='dashboard.php'>Kembali</a></div>";
     }
     ?>
 </div>

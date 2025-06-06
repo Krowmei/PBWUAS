@@ -3,9 +3,12 @@ include 'config.php';
 
 $kode_pesanan = isset($_GET['kode_pesanan']) ? $_GET['kode_pesanan'] : '';
 $pesanan = [];
-$total = 0;
+$subtotal = 0;
+$metode_pembayaran = '';
+$total_bayar = 0;
 
 if ($kode_pesanan) {
+    // Ambil detail pesanan dan hitung subtotal asli
     $stmt = $conn->prepare(
         "SELECT d.jumlah, m.nama_menu, m.harga 
          FROM detail_pesanan AS d 
@@ -18,10 +21,26 @@ if ($kode_pesanan) {
 
     while ($row = $result->fetch_assoc()) {
         $pesanan[] = $row;
-        $total += $row['jumlah'] * $row['harga'];
+        $subtotal += $row['jumlah'] * $row['harga'];
     }
     $stmt->close();
+
+    // Ambil metode pembayaran dan total setelah diskon
+    $stmt2 = $conn->prepare("SELECT metode_pembayaran, total FROM pesanan WHERE id_pesanan = ?");
+    $stmt2->bind_param("s", $kode_pesanan);
+    $stmt2->execute();
+    $result2 = $stmt2->get_result();
+    
+    if ($row2 = $result2->fetch_assoc()) {
+        $metode_pembayaran = $row2['metode_pembayaran'];
+        $total_bayar = $row2['total'];
+    }
+    $stmt2->close();
 }
+
+// Cek apakah cashless berdasarkan metode pembayaran
+$is_cashless = strtolower($metode_pembayaran) == 'cashless';
+$diskon = $is_cashless ? $subtotal * 0.20 : 0;
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -65,9 +84,14 @@ if ($kode_pesanan) {
       </table>
 
       <div class="totals">
-        <p><strong>SUBTOTAL</strong> <span>IDR <?= number_format($total, 0, ',', '.') ?></span></p>
-        <p><strong>TOTAL</strong> <span>IDR <?= number_format($total, 0, ',', '.') ?></span></p>
-        <p><strong>CASHLESS</strong> <span>IDR <?= number_format($total, 0, ',', '.') ?></span></p>
+        <p><strong>SUBTOTAL</strong> <span>IDR <?= number_format($subtotal, 0, ',', '.') ?></span></p>
+        
+        <?php if ($is_cashless): ?>
+        <p><strong>DISKON CASHLESS (20%)</strong> <span>-IDR <?= number_format($diskon, 0, ',', '.') ?></span></p>
+        <?php endif; ?>
+        
+        <p><strong>TOTAL</strong> <span>IDR <?= number_format($total_bayar, 0, ',', '.') ?></span></p>
+        <p><strong><?= strtoupper($metode_pembayaran) ?></strong> <span>IDR <?= number_format($total_bayar, 0, ',', '.') ?></span></p>
       </div>
       <?php else: ?>
         <p class="no-items">Tidak ada item untuk pesanan ini.</p>
